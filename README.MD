@@ -4,7 +4,7 @@ Here are a few starter tips to using the API:
 
 1) Download the project and install the node_modules (npm install)
 
-2) Start the server from root (node server.js)
+2) Start the server from root (node index.js)
 
 3) Head on over to http://localhost:3000/ and you should see an html page with a search bar.
 
