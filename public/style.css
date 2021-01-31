@@ -1,0 +1,164 @@
+body
+{
+  font-family: 'Roboto', sans-serif;
+  overflow: scroll;
+  background-color: #000 !important;
+}
+
+
+div.error {
+  color: #FFF;
+  text-align: center;
+  margin: auto;
+}
+
+div.card
+{
+  position: relative;
+  width: 420px;
+  height: 200px;
+  margin: 20px auto;
+  background-color: #fcfdfd;
+  border-radius: 10px;
+  padding: 20px;
+  padding-right: 30px;
+  box-shadow: 0px 31px 35px -26px #080c21;
+}
+
+div.left-panel
+{
+  position: absolute;
+}
+
+div.date
+{
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(0,0,0,0.5);
+  font-family: "Open Sans", sans-serif;
+}
+
+div.location
+{
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: orange;
+  font-family: "Open Sans", sans-serif;
+}
+
+hr {
+  margin-top: 2px !important;
+  margin-bottom: 5px !important;
+}
+
+div.low
+{
+  font-size: 16px;
+  font-weight: normal;
+  color: rgba(0,0,0,0.5);
+
+}
+
+div.high
+{
+  font-size: 16px;
+  font-weight: normal;
+  color: rgba(0,0,0,0.5);
+}
+
+div.humidity
+{
+  font-size: 16px;
+  font-weight: normal;
+  color: rgba(0,0,0,0.5);
+}
+
+div.probability
+{
+  font-size: 16px;
+  font-weight: normal;
+  color: rgba(0,0,0,0.5);
+}
+
+div.temp
+{
+  font-size: 60px;
+  color: rgba(0,0,0,0.9);
+  font-weight: 100;
+  padding-left: 290px;
+  margin-top: -20px;
+}
+
+img {
+  padding-left: 290px;
+}
+
+div.condition {
+  font-size: 20px;
+  font-weight: normal;
+  color: rgba(0,0,0,0.5);
+  text-align: center;
+  padding-top: 8px;
+  padding-left: 270px;
+}
+
+div.panel
+{
+  display: inline-block;
+}
+
+div.right-panel
+{
+  position: absolute;
+  float: right;
+}
+
+.searchContainer {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.searchBox {
+  position: relative;
+  width: 275px;
+  padding: 8px;
+  border-radius: 5rem;
+  display: inline-block;
+  text-indent: 10px;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.searchButton {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  background-color: orange;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5rem;
+  width: 100px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.searchButton:hover {
+  background-color: #FFF;
+  color: orange;
+  outline: none;
+}
+
+.searchButton:focus {
+  outline: none;
+}

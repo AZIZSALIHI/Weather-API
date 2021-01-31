@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>MetaWeather API</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <script id="DL">
+        window.dataLayer = window.dataLayer || [];
+
+    </script>
+
+    <div class="searchContainer">
+      <input type="text" class="searchBox" id="userInput" placeholder="Enter your location" />
+      <button class="searchButton" id="subButton" onclick="getInput();">Search</button>
+    </div>
+    
+    <div id="myData" class="row">
+      
+    </div>
+
+    <script src="./card.js"></script>
+</body>
+
+</html>
