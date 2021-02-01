@@ -57,7 +57,7 @@ div.low
   font-size: 16px;
   font-weight: normal;
   color: rgba(0,0,0,0.5);
-
+  padding-top: 5px;
 }
 
 div.high
