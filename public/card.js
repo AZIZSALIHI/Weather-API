@@ -1,5 +1,3 @@
-// see https://repl.it/@AZIZSALIHI/MetaWeather-Server-Express for back-end server implementation details
-
 const masterDiv = document.querySelector("#myData");
 
 var input = document.getElementById("userInput");
@@ -35,7 +33,7 @@ function getWoeID(input) {
   let request = new XMLHttpRequest();
   request.open(
     "GET",
-    `https://MetaWeather-Server-Express.azizsalihi.repl.co/search/${input}`
+    `http://localhost:3000/search/${input}`
   );
   request.send();
   request.onload = () => {
@@ -61,7 +59,7 @@ function getWeather(id) {
   let request = new XMLHttpRequest();
   request.open(
     "GET",
-    `https://MetaWeather-Server-Express.azizsalihi.repl.co/${id}`
+    `http://localhost:3000/${id}`
   );
   request.send();
   request.onload = () => {
