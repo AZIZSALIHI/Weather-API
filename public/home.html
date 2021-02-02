@@ -14,18 +14,37 @@
 </head>
 
 <body>
+    <br>
+    <div class="info">
+        <h3 style="text-align: center; ">Welcome to my Weather API!</h3><br>
+
+        <p style="text-align: center; text-decoration: underline;">Here are a few starter tips to using the API:</p>
+
+        * Enter your location (i.e city) and wait for the page to be populated with weather cards for your query!<br>
+
+        * There should be 4 weather cards displayed in the browser: Today's weather and the following 3 days.<br>
+
+        <span style="text-decoration: underline;">Note:</span> Incomplete queries will fetch a city that matches closest
+        to your query. Also, not all cities are supported by the API (i.e Ottawa, Tampa Bay, etc.)
+    </div>
+
+
     <script id="DL">
         window.dataLayer = window.dataLayer || [];
 
     </script>
 
     <div class="searchContainer">
-      <input type="text" class="searchBox" id="userInput" placeholder="Enter your location" />
-      <button class="searchButton" id="subButton" onclick="getInput();">Search</button>
+        <input type="text" class="searchBox" id="userInput" placeholder="Enter your location" />
+        <button class="searchButton" id="subButton" onclick="getInput();">Search</button>
     </div>
-    
+
+    <div id="myLoader" class="row">
+
+    </div>
+
     <div id="myData" class="row">
-      
+
     </div>
 
     <script src="./card.js"></script>

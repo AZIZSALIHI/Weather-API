@@ -1,4 +1,5 @@
 const masterDiv = document.querySelector("#myData");
+const loadingDiv = document.querySelector("#myLoader");
 
 var input = document.getElementById("userInput");
 input.addEventListener("keyup", function (event) {
@@ -25,6 +26,22 @@ function getInput() {
   }
 }
 
+function loader(json) {
+  if (isEmpty(json)) {
+    while (loadingDiv.firstChild) {
+      loadingDiv.removeChild(loadingDiv.firstChild);
+    }
+    const msg = `<div class="error"> Sorry, no results under that search query... </div>`;
+    document.getElementById("myData").innerHTML =
+      document.getElementById("myData").innerHTML + msg;
+  } else {
+    const msg = `<div class="error"> Loading results... </div>`;
+    document.getElementById("myLoader").innerHTML =
+      document.getElementById("myLoader").innerHTML + msg;
+    getWeather(json[0].woeid);
+  }
+}
+
 function isEmpty(str) {
   return !str || 0 === str.length;
 }
@@ -41,14 +58,8 @@ function getWoeID(input) {
     if (request.status === 200) {
       const json = JSON.parse(request.response);
       // console.log(json);
-      if (isEmpty(json)) {
-        const msg = `<div class="error"> Sorry, no results under that search query... </div>`;
-        document.getElementById("myData").innerHTML =
-          document.getElementById("myData").innerHTML + msg;
-      } else {
-        // json.forEach((element) => getWeather(element.woeid));
-        getWeather(json[0].woeid);
-      }
+      loader(json);
+      // json.forEach((element) => getWeather(element.woeid));
     } else {
       console.log(`error ${request.status} ${request.statusText}`);
     }
@@ -76,22 +87,24 @@ function getWeather(id) {
 }
 
 function sendDataLayer(json) {
-
-  var dataLayer = []
+  var dataLayer = [];
 
   for (let item = 0; item < 4; item++) {
     const val = json.list[item];
-    const x =              `{"date": "${val.date}",
+    const x = `{"date": "${val.date}",
                             "condition": "${val.condition}",
                             "nowTemp": ${val.nowTemp},
                             "minTemp": ${val.minTemp},
                             "maxTemp": ${val.maxTemp},
                             "humidity": ${val.humidity},
-                            "predictability": ${val.predictability}}`
+                            "predictability": ${val.predictability}}`;
     dataLayer.push(x);
-    
-  } 
-  document.getElementById("DL").innerHTML = document.getElementById("DL").innerHTML + "dataLayer = [" + dataLayer + "];";
+  }
+  document.getElementById("DL").innerHTML =
+    document.getElementById("DL").innerHTML +
+    "dataLayer = [" +
+    dataLayer +
+    "];";
 }
 
 function populateCards(json) {
@@ -162,4 +175,8 @@ function populateCards(json) {
         document.getElementById("myData").innerHTML + y;
     }
   }
+  while (loadingDiv.firstChild) {
+    loadingDiv.removeChild(loadingDiv.firstChild);
+  }
 }
+

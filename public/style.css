@@ -5,7 +5,11 @@ body
   background-color: #000 !important;
 }
 
-
+div.info {
+  color: orange;
+  width: 750px;
+  margin: 0 auto;
+}
 div.error {
   color: #FFF;
   text-align: center;
@@ -58,6 +62,7 @@ div.low
   font-weight: normal;
   color: rgba(0,0,0,0.5);
   padding-top: 5px;
+
 }
 
 div.high
